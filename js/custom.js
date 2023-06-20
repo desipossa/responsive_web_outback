@@ -30,7 +30,12 @@ $(function () {
     const ItmSlide = new Swiper('.itm_slide', {
         loop: true,
         slidesPerView: 2,
-        spaceBetween: 30,
+        spaceBetween: 400,
+        speed: 900,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
     })
 
 

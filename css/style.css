@@ -171,49 +171,97 @@
     border-radius: 50%;
 }
 
-.MainItm .itm {
-    display: flex;
+.MainItm {
+    position: relative;
 }
 
-.MainItm .itm .txt {
-    margin: 0 -100px 0 0;
+.MainItm .inner {}
+
+.MainItm .detail .txt {
+    position: absolute;
+    top: 100px;
+    left: -400px;
+    opacity: 0;
+    width: 300px;
     z-index: 999;
 }
 
-.MainItm .itm .txt h3 {
-    font-size: 50px;
+.MainItm .detail .txt h3 {
+    font-size: 60px;
     font-weight: 700;
     margin: 0 0 50px 0;
 }
 
-.MainItm .itm .txt strong {
-    display: block;
+.MainItm .detail.swiper-slide-next .txt {
+    animation: op 4s .5s both;
+}
+
+.MainItm .detail figure img {
+    width: 100%;
+    transform: scale(0.7);
+    transform-origin: 0 50%;
+}
+
+.MainItm .detail.swiper-slide-next figure img {
+    transform-origin: 100% 50%;
+    transform: scale(1);
+    transition: 0.5s;
+    animation: sc 4s 1s both;
+}
+
+
+@keyframes sc {
+    0% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes op {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+}
+
+.MainItm .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1600px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainItm .arrows i {
+    padding: 10px;
+    background: #980101;
+    color: #fff;
     font-size: 20px;
-    font-weight: 300;
-    margin: 0 0 20px 0;
-}
-
-
-.MainItm .swiper-slide-active .itm .txt {
-    display: none;
-}
-
-
-
-.MainItm .itm figure {
-    flex: 1 0 500px;
-}
-
-.MainItm .itm figure img {
-    width: 500px;
-}
-
-.MainItm .swiper-slide-active .itm figure {
-    flex: 1 0 500px;
-
-}
-
-.MainItm .swiper-slide-active .itm figure img {
-    width: 300px;
-    transition: 1s 1s;
+    border-radius: 5px;
 }
