@@ -46,11 +46,6 @@
     color: #fff;
 }
 
-.Main {
-    background: #444;
-
-}
-
 .MainVisual {
     position: relative;
 }
@@ -174,4 +169,51 @@
     height: 15px;
     background: #fff;
     border-radius: 50%;
+}
+
+.MainItm .itm {
+    display: flex;
+}
+
+.MainItm .itm .txt {
+    margin: 0 -100px 0 0;
+    z-index: 999;
+}
+
+.MainItm .itm .txt h3 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+}
+
+.MainItm .itm .txt strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+}
+
+
+.MainItm .swiper-slide-active .itm .txt {
+    display: none;
+}
+
+
+
+.MainItm .itm figure {
+    flex: 1 0 500px;
+}
+
+.MainItm .itm figure img {
+    width: 500px;
+}
+
+.MainItm .swiper-slide-active .itm figure {
+    flex: 1 0 500px;
+
+}
+
+.MainItm .swiper-slide-active .itm figure img {
+    width: 300px;
+    transition: 1s 1s;
 }

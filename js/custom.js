@@ -27,6 +27,12 @@ $(function () {
         }
     });
 
+    const ItmSlide = new Swiper('.itm_slide', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 30,
+    })
+
 
     $('.MainVisual .arrows .left').on('click', function () {
         MainSlide.slidePrev();
