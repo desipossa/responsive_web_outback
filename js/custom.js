@@ -13,7 +13,7 @@ $(function () {
     const MainSlide = new Swiper('.main_slide', {
         loop: true,
         parallax: true,
-        speed: 600,
+        speed: 1600,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
