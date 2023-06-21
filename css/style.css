@@ -527,7 +527,7 @@
 .Footer .top {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 30px 0;
+    margin: 0 0 50px 0;
 }
 
 .Footer .top .left {
@@ -573,4 +573,35 @@
     display: flex;
     justify-content: space-between;
     font-size: 15px;
+}
+
+.Footer .author ul {
+    margin: 0 0 30px 0;
+    line-height: 20px;
+}
+
+.Footer .author ul span {
+    font-size: 0;
+    padding: 0 8px;
+}
+
+.Footer .author ul span::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #666;
+}
+
+.Footer .sns {
+    display: flex;
+    gap: 5px;
+}
+
+.Footer .sns i {
+    padding: 8px;
+    background: #666;
+    color: #ddd;
+    font-size: 18px;
+    border-radius: 50%;
 }
