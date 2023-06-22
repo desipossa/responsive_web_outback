@@ -69,6 +69,16 @@ $(function () {
     //     ItmSlide.slidePrev();
     // });
 
+    $('.mobile_btn').on('click', function () {
+        $('.Gnb').toggleClass('on');
+    });
+
+    $('.Gnb>ul>li>a').on('click', function (e) {
+        e.preventDefault();
+        $(this).next().slideDown();
+    })
+
+
 
 
 
