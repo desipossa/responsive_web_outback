@@ -25,6 +25,8 @@
     background: url(../images/logo_red_type_02.png) no-repeat;
 }
 
+.Header .Gnb {}
+
 .Header .Gnb>ul {
     display: flex;
     gap: 40px;
@@ -34,6 +36,49 @@
     display: block;
     font-size: 20px;
     color: #fff;
+}
+
+.Header .Gnb>ul>li {
+    position: relative;
+    line-height: 100px;
+}
+
+.Header .Gnb>ul>li::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 3px;
+    background: #be161e;
+}
+
+.Header .Gnb>ul>li:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.Header .Gnb>ul>li .snb {
+    position: absolute;
+    top: 100px;
+    left: -40px;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px 40px 30px 40px;
+
+    display: none;
+}
+
+.Header .Gnb>ul>li:hover .snb {
+    display: block;
+}
+
+.Header .Gnb>ul>li .snb a {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
 }
 
 .Header .login {
